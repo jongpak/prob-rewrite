@@ -1,0 +1,14 @@
+{
+    "name": "prob/rewrite-helper",
+    "description": "A library for path of url using mod_rewrite",
+    "homepage": "https://github.com/jongpak/prob-rewrite",
+    "keyword": ["rewrite", "mod_rewrite", "url", "path"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "Prob\\Rewrite\\": "src/" }
+    },
+    "require": {
+        "php": ">=5.3"
+    }
+}
