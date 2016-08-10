@@ -11,7 +11,7 @@ class RequestTest extends TestCase
         $_SERVER['REQUEST_METHOD'] = 'GET';
 
         $req = new Request();
-        $this->assertEquals($req->method(), 'GET');
+        $this->assertEquals($req->getMethod(), 'GET');
     }
 
     public function testPOSTMethod()
@@ -19,19 +19,19 @@ class RequestTest extends TestCase
         $_SERVER['REQUEST_METHOD'] = 'POST';
 
         $req = new Request();
-        $this->assertEquals($req->method(), 'POST');
+        $this->assertEquals($req->getMethod(), 'POST');
     }
 
     public function testMethodWithoutRequestMethod()
     {
         $req = new Request();
-        $this->assertEquals($req->method(), 'GET');
+        $this->assertEquals($req->getMethod(), 'GET');
     }
 
     public function testNullPathInfo()
     {
         $req = new Request();
-        $this->assertEquals($req->path(), '/');
+        $this->assertEquals($req->getPath(), '/');
     }
 
     public function testRootPathInfo()
@@ -39,7 +39,7 @@ class RequestTest extends TestCase
         $_SERVER['PATH_INFO'] = '/';
 
         $req = new Request();
-        $this->assertEquals($req->path(), '/');
+        $this->assertEquals($req->getPath(), '/');
     }
 
     public function testOneDeepPathInfo()
@@ -47,7 +47,7 @@ class RequestTest extends TestCase
         $_SERVER['PATH_INFO'] = '/some';
 
         $req = new Request();
-        $this->assertEquals($req->path(), '/some');
+        $this->assertEquals($req->getPath(), '/some');
     }
 
     public function testTwoDeepPathInfo()
@@ -55,7 +55,7 @@ class RequestTest extends TestCase
         $_SERVER['PATH_INFO'] = '/some/other';
 
         $req = new Request();
-        $this->assertEquals($req->path(), '/some/other');
+        $this->assertEquals($req->getPath(), '/some/other');
     }
 
     public function testValidParam()
@@ -63,18 +63,18 @@ class RequestTest extends TestCase
         $_REQUEST['some'] = 'ok';
 
         $req = new Request();
-        $this->assertEquals($req->param('some'), 'ok');
+        $this->assertEquals($req->getParam('some'), 'ok');
     }
 
     public function testInvalidParam()
     {
         $req = new Request();
-        $this->assertEquals($req->param('invalid'), null);
+        $this->assertEquals($req->getParam('invalid'), null);
     }
 
     public function testInvalidParamDefault()
     {
         $req = new Request();
-        $this->assertEquals($req->param('invalid', 'ok'), 'ok');
+        $this->assertEquals($req->getParam('invalid', 'ok'), 'ok');
     }
 }
