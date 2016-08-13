@@ -34,7 +34,7 @@ class Url
     }
 
     /**
-     * @param bool $rewrite
+     * @param bool $rewrite use rewrite format url
      * @return string
      */
     public function parse($rewrite = true)
