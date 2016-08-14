@@ -45,8 +45,9 @@ class Url
 
     public function setSite($site)
     {
-        if ($site[strlen($site) - 1] !== '/')
+        if ($site[strlen($site) - 1] !== '/') {
             $site .= '/';
+        }
 
         $this->site = $site;
     }
@@ -68,8 +69,9 @@ class Url
 
     public function setPath($path)
     {
-        if ($path[0] !== '/')
+        if ($path[0] !== '/') {
             $path = '/' . $path;
+        }
 
         $this->path = $path;
     }
