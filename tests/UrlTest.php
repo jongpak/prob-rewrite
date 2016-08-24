@@ -2,9 +2,9 @@
 
 namespace Prob\Rewrite;
 
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class UrlTest extends TestCase
+class UrlTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var $url Url

@@ -2,10 +2,16 @@
 
 namespace Prob\Rewrite;
 
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class RequestTest extends TestCase
+class RequestTest extends PHPUnit_Framework_TestCase
 {
+    public function setUp()
+    {
+        $_SERVER = [];
+        $_REQUEST = [];
+    }
+
     public function testGetMethod()
     {
         $_SERVER['REQUEST_METHOD'] = 'GET';
