@@ -1,6 +1,8 @@
 # Prob/Rewrite
 *A library for path of url using mod_rewrite*
 
+[![Build Status](https://travis-ci.org/jongpak/prob-rewrite.svg?branch=master)](https://travis-ci.org/jongpak/prob-rewrite)
+
 ## Usage
 
 ### basic
