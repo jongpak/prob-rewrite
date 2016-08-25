@@ -2,6 +2,8 @@
 *A library for path of url using mod_rewrite*
 
 [![Build Status](https://travis-ci.org/jongpak/prob-rewrite.svg?branch=master)](https://travis-ci.org/jongpak/prob-rewrite)
+[![codecov](https://codecov.io/gh/jongpak/prob-rewrite/branch/master/graph/badge.svg)](https://codecov.io/gh/jongpak/prob-rewrite)
+
 
 ## Usage
 
